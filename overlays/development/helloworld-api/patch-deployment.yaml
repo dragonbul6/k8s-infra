@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-api-development
+  name: hello-world-api
   namespace: development
 spec:
   template:

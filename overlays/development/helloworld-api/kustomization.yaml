@@ -1,6 +1,12 @@
 resources:
-  - ../../base/helloworld-api
+  - ../../../base/helloworld-api
+
+nameSuffix: -development
+namespace: development
 
 patches:
   - path: patch-deployment.yaml
+    target:
+      kind: Deployment
+      name: hello-world-api
 
