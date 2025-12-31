@@ -11,7 +11,7 @@ spec:
     path: argo-app/development  # It watches the folder containing your app definitions
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: argocd           # It deploys apps into the argocd namespace
+    namespace: development           # It deploys apps into the argocd namespace
   syncPolicy:
     automated:
       prune: true
