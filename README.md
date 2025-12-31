@@ -3,6 +3,7 @@
 This repository manages my Kubernetes infrastructure and applications using a **GitOps** workflow. It utilizes **Kustomize** for configuration management and **Argo CD** for automated deployments on Minikube.
 
 
+
 ## 🏗 Project Structure
 
 The repository follows a **Base/Overlay** pattern to keep configurations DRY (Don't Repeat Yourself):
@@ -17,3 +18,6 @@ The repository follows a **Base/Overlay** pattern to keep configurations DRY (Do
 ├── argo-app/               # Application definitions for Argo CD
 │   └── development/        # Managed by the App-of-Apps pattern
 └── bootstrap/              # Root Application to initialize the cluster
+
+
+map: https://github.com/milanm/DevOps-Roadmap?tab=readme-ov-file
