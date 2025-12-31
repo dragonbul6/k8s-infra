@@ -1,5 +1,5 @@
 resources:
-  - ../../base
+  - ../../base/helloworld-api
 
 patches:
   - path: patch-deployment.yaml

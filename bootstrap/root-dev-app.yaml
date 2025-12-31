@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-world-api-dev
+  name: dev-root-app
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'git@github.com:dragonbul6/k8s-infra.git'
     targetRevision: HEAD
-    path: /overlays/development/helloworld-api
+    path: argo-app/development  # It watches the folder containing your app definitions
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: default
+    namespace: argocd           # It deploys apps into the argocd namespace
   syncPolicy:
     automated:
       prune: true
