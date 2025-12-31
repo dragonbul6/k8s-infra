@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-world-api-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'git@github.com:dragonbul6/k8s-infra.git'
+    targetRevision: HEAD
+    path: k8s/overlays/development/helloworld-api
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
