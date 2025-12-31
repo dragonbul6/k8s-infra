@@ -8,10 +8,8 @@ spec:
   source:
     repoURL: 'git@github.com:dragonbul6/k8s-infra.git'
     targetRevision: HEAD
-    path: .
-  kustomize:
-      path: overlays/development/helloworld-api
-  destination:
+    path: overlays/development/helloworld-api
+ destination:
     server: 'https://kubernetes.default.svc'
     namespace: development
   syncPolicy:
